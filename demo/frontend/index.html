@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APPLICATION</title>
+</head>
+<body>
+
+    <h1>Todo Application </h1>
+
+    <label for="">TODO : </label>
+    <br><br>
+    <textarea   id ="content" rows="5" cols="40"></textarea>
+    <br><br>
+    <button onclick="saveTodo()" style="font-size: 15px; text-align: center; justify-content: center;">Submit</button>
+
+    <br><br>
+    <script>
+        function saveTodo(){
+            var content = document.getElementById("content")
+            let div = document.createElement('div');
+             div.id = 'content';
+            div.innerHTML = content.value;
+            document.body.appendChild(div);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
