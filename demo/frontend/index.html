@@ -23,7 +23,7 @@
     <br><br>
     <script>
        async function saveTodo(){
-            var content = document.getElementById("content")
+            var content = document.getElementById("content").value
             // let div = document.createElement('div');
             //  div.id = 'content';
             // div.innerHTML = content.value;
@@ -48,12 +48,12 @@
             const response = await fetch("http://localhost:8080/todos")
             const todos = response.json()
 
-            const showtodos = document.getElementById("showtods")
+            const showtodos = document.getElementById("showtodos")
 
             showtodos.innerHTML=''
             todos.array.forEach(todo => {
                 let todoItem = document.createElement('div');
-                todoItem.innerHTML = `<input type="checkbox" ${todo.completed ? 'checked' : ''} disabled> ${todo.task}`;
+                todoItem.innerHTML = `<input type="checkbox" ${todo.completed ? 'checked' : ''} disabled> ${todo.content}`;
                 todosDiv.appendChild(todoItem);
                 
             });
