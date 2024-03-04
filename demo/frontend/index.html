@@ -28,12 +28,12 @@
             //  div.id = 'content';
             // div.innerHTML = content.value;
             // document.body.appendChild(div);
-            const response = await fetch("http:localhost:8080/save",{ 
+            const response = await fetch("http://localhost:8080/todos",{ 
                 method:'POST',
                 headers:{
                     'Content-type':'application/json'
                 },
-                body:JSON.stringify({task})
+                body:JSON.stringify({content:content , completed:false})
             })
             if(response.ok ){
                 console.log("saved a todo.....")

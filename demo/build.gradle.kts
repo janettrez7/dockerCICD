@@ -26,6 +26,13 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     testImplementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut.validation:micronaut-validation")
+    implementation("jakarta.validation:jakarta.validation-api")
+    implementation("io.micronaut.data:micronaut-data-jpa")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    runtimeOnly("com.h2database:h2")
+
+
 }
 
 
